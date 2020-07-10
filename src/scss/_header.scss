@@ -1,16 +1,37 @@
-.header {}
-
+.header{
+   position: relative;
+}
 .bg {
+   position: relative;
    width: 100%;
    height: 100vh;
    @include bg();
 }
-
+.line-vert-l,
+.line-vert-r{
+   display: block;
+   position: absolute;
+   top: 100px;
+   bottom: 0;
+   display: block;
+   width: 0.5px;
+   background-color: rgba(255, 255, 255, 0.2);
+}
+.line-vert-l{
+   left: 22%;
+}
+.line-vert-r{
+   right: 22%;
+}
 .menu {
    display: flex;
    justify-content: space-around;
    align-items: center;
    height: 100px;
+   background: linear-gradient(rgba(255, 255, 255, 0.2)), linear-gradient(rgba(255, 255, 255, 0.2));
+   background-size: 41.3% 1px, 41.3% 1px;
+   background-repeat: no-repeat, no-repeat;
+   background-position: left bottom, right bottom;
 
    &__link {
       font-size: 12px;
@@ -61,11 +82,23 @@
       font-size: 96px;
       text-transform: uppercase;
       margin-top: 20px;
+
+      &:after {
+         content: "";
+         display: block;
+         width: 60px;
+         height: 5px;
+         margin: 23px auto 0;
+         background-color: $orange;
+         border-radius: 50px;
+         text-align: center;
+
+      }
    }
 }
 
 .block-btn {
-   margin-top: 57px;
+   margin-top: 30px;
 
    // .block-btn__book
 
