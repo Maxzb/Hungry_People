@@ -1,0 +1,56 @@
+https://jonsuh.com/hamburgers/
+
+
+Добавляем гамбурер в разметку!
+
+<div class="hamburger hamburger--spin">
+  <div class="hamburger-box">
+    <div class="hamburger-inner"></div>
+  </div>
+</div>
+
+Изменить цвет гамбургера:
+
+.hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #fff; }
+
+и здесь
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before{
+   background-color: #fff;
+}
+
+
+JQuery код
+
+$(function(){
+	$('.hamburger').on('click', function(){
+		$('.hamburger').toggleClass('is-active');
+		$('.mob-menu').toggleClass('menu-active');
+		$('html, body').toggleClass('scroll');
+	});
+});
+
+
+Свойства для Мобильного меню!
+
+.mob-menu{
+   position: absolute;   
+   width: 100%;
+   height: 100%;
+   top: -100%;
+   left: 0;
+   background-color: rgba(0,0,0,0.97);
+   transition-duration: .5s;
+}
+.menu-active{
+   top: 0;
+}
+.scroll {
+   overflow: hidden;
+ }
+
