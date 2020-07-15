@@ -80,6 +80,18 @@
       margin-top: 15%;
    }
 }
+
+@media (max-height: 679px) {
+   .menu li:not(:last-child){
+      margin-bottom: 25px;
+   }
+}
+@media (max-height: 604px) {
+   .menu li:not(:last-child){
+      margin-bottom: 20px;
+   }
+}
+
 @media (max-width: 581px) {
    .info-block__title{
       font-size: 70px;
