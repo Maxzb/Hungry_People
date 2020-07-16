@@ -1,0 +1,28 @@
+.ourteam *{
+   color: #fff;
+}
+.ourteam{
+   @include bg();
+   padding-top: 44px;
+}
+
+.ourteam .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 42px;
+}
+.ourteam__title {
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 14px;
+   letter-spacing: 0.5em;
+   text-align: center;
+   text-transform: uppercase;
+}
+.image-block_left{
+   text-align: right;
+}
+.image-block__cube_left {
+   left: 0;
+}
