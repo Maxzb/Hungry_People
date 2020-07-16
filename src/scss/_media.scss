@@ -25,6 +25,9 @@
          margin: 0;
       }
    }
+   .line-center {
+      display: none;
+   }
 }
 
 @media (max-width: 769px) {
@@ -58,10 +61,6 @@
       li:not(:last-child) {
          margin-bottom: 35px;
       }
-   }
-
-   .line-center {
-      display: none;
    }
 
    .logo--mob {
@@ -104,13 +103,13 @@
 }
 
 @media (max-height: 679px) {
-   .menu li:not(:last-child) {
+   .menu li {
       margin-bottom: 25px;
    }
 }
 
 @media (max-height: 604px) {
-   .menu li:not(:last-child) {
+   .menu li {
       margin-bottom: 20px;
    }
 }
@@ -287,3 +286,60 @@
 }
 
 /* END ABOUT US */
+
+/* BOOK A TABLE */
+@media (max-width: 1041px){
+   .bookatable .container {
+      align-items: flex-end;
+   }
+   .section-info-block__form{
+      flex-direction: column;
+   }
+   .form__input {
+      height: 54.5px;
+      flex: 1 1 100%;
+   }
+   
+}
+@media (max-width: 950px){
+   .section-info-block__title_form{
+      font-size: 26px;
+   }
+   .section-info-block__form{
+      padding-right: 0;
+   }
+}
+@media (max-width: 921px) {
+   .section-info-block__title_form{
+      white-space: nowrap;
+      font-size: 36px;
+   }
+   .bookatable .container {
+      flex-direction: column;
+      align-items: center;
+   }
+   .form__input {
+      height: 60px;
+      flex: 0 1 49%;
+   }
+   .section-info-block__form{
+      padding: 0 10%;
+   }
+}
+@media (max-width: 501px) {
+   .section-info-block__form{
+      flex-direction: column;
+   }
+   .form__input {
+      height: 54.5px;
+      flex: 1 1 100%;
+   }
+   .section-info-block__form{
+      padding: 0 5%;
+   }
+   .form__button{
+      margin-bottom: 5%;
+   }
+}
+
+/* END BOOK A TABLE */
