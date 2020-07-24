@@ -623,7 +623,7 @@ body {
   width: 90px;
   height: 60px;
   border-radius: 0 0 70% 70% / 0 0 100% 100%;
-  background-color: rgba(0, 0, 0, 0.97);
+  background-color: rgba(0, 0, 0, 0.87);
   -webkit-box-shadow: 0px 3px 3px 0px #3e3a31;
           box-shadow: 0px 3px 3px 0px #3e3a31;
   -webkit-transition-duration: .8s;
