@@ -352,3 +352,32 @@
 }
 
 /* END BOOK A TABLE */
+
+/* SLIDER */
+
+@media (max-width: 963px) {
+   .specialties-slider_item{
+      flex-direction: column;
+   }
+   .specialties .image-block__photo img{
+      margin: 0 auto;
+   }
+   .specialties .image-block__cube_left{
+      left: 50px;
+   }
+   .specialties-slider_dots{
+      padding-top: 50px;
+   }
+}
+@media (max-width: 690px) {
+   .specialties .image-block__cube_left{
+      display: none;
+   }
+}
+@media (max-width: 381px) {
+   .specialties-slider_dots{
+      padding-top: 25px;
+   }
+}
+
+/* END SLIDER */

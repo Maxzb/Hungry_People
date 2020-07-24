@@ -10,34 +10,26 @@ $(document).ready(function () {
 
 	// SLICK-SLIDER
 
-	$(".slider").slick({
-
-		// normal options...
-		infinite: true,
-
-		// the magic
-		responsive: [{
-
-			breakpoint: 1024,
-			settings: {
-				slidesToShow: 3,
-				infinite: true
+	$(".specialties-slider").slick({
+		arrows:false,
+		dots:true,
+		slidesToShow:1,
+		appendDots:$('.specialties-slider_dots')
+		/* speed:1000, */
+		/* responsive:[
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow:2
+				}
+			},
+			{
+				breakpoint: 550,
+				settings: {
+					slidesToShow:1
+				}
 			}
-
-		}, {
-
-			breakpoint: 600,
-			settings: {
-				slidesToShow: 2,
-				dots: true
-			}
-
-		}, {
-
-			breakpoint: 300,
-			settings: "unslick" // destroys slick
-
-		}]
+		] */
 	});
 
 	//ПЛАВНОЕ ПЕРЕМЕЩЕНИЕ К ЯКОРЯМ

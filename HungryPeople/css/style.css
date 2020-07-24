@@ -321,7 +321,6 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-/* @import "slick-slider"; */
 body {
   font-family: 'Open Sans', sans-serif;
   color: #fff;
@@ -935,6 +934,75 @@ body {
   color: #E8C300;
 }
 
+.specialties * {
+  color: #fff;
+}
+
+.specialties {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 44px;
+}
+
+.specialties__title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.specialties .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* padding-bottom: 46px; */
+}
+
+.specialties .image-block__photo img {
+  margin-left: auto;
+}
+
+/* Стили для Слайдера */
+.slick-dots li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 10px;
+}
+
+.slick-dots li:hover {
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active {
+  background-color: #fff;
+}
+
+.slick-dots li button {
+  font-size: 0;
+}
+
+.specialties-slider_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.specialties-slider_dots {
+  text-align: center;
+}
+
 @media (max-width: 1091px) {
   .info-block {
     top: 32%;
@@ -1286,3 +1354,35 @@ body {
 }
 
 /* END BOOK A TABLE */
+/* SLIDER */
+@media (max-width: 963px) {
+  .specialties-slider_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .specialties .image-block__photo img {
+    margin: 0 auto;
+  }
+  .specialties .image-block__cube_left {
+    left: 50px;
+  }
+  .specialties-slider_dots {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 690px) {
+  .specialties .image-block__cube_left {
+    display: none;
+  }
+}
+
+@media (max-width: 381px) {
+  .specialties-slider_dots {
+    padding-top: 25px;
+  }
+}
+
+/* END SLIDER */

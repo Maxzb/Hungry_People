@@ -1,0 +1,55 @@
+.specialties * {
+   color: #fff;
+}
+
+.specialties {
+   @include bg();
+   padding-top: 44px;
+}
+
+.specialties__title {
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 14px;
+   letter-spacing: 0.5em;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.specialties .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* padding-bottom: 46px; */
+}
+.specialties .image-block__photo img {
+   margin-left: auto;
+}
+
+/* Стили для Слайдера */
+.slick-dots li {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: rgba(255, 255, 255, 0.5);
+   margin: 0 10px;
+
+   &:hover {
+      cursor: pointer;
+   }
+}
+
+.slick-dots li.slick-active {
+   background-color: #fff;
+}
+
+.slick-dots li button {
+   font-size: 0;
+}
+.specialties-slider_item{
+   display: flex;
+}
+.specialties-slider_dots{
+   text-align: center;
+}
