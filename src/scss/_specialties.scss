@@ -3,8 +3,10 @@
 }
 
 .specialties {
+   position: relative;
    @include bg();
-   padding-top: 44px;
+   padding-top: 45px;
+   padding-bottom: 45px;
 }
 
 .specialties__title {
@@ -20,7 +22,6 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   /* padding-bottom: 46px; */
 }
 .specialties .image-block__photo img {
    margin-left: auto;
@@ -47,7 +48,7 @@
 .slick-dots li button {
    font-size: 0;
 }
-.specialties-slider_item{
+.specialties-slider .specialties-slider_item{
    display: flex;
 }
 .specialties-slider_dots{

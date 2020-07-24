@@ -373,18 +373,6 @@ body {
 .line-center {
   top: 200px;
   left: 50%;
-  /* &::before{
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      content: '';
-      display: block;
-      width: 60px;
-      height: 60px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      transform: translateX(-50%);
-   } */
 }
 
 .line-center::after {
@@ -647,9 +635,10 @@ body {
   top: 0;
 }
 
-/* .scroll {
-   overflow: hidden;
- } */
+.scroll {
+  overflow: hidden;
+}
+
 /* Mobile burger */
 .mob-menu__burger {
   position: absolute;
@@ -698,6 +687,10 @@ body {
   -webkit-transition-duration: .1s;
        -o-transition-duration: .1s;
           transition-duration: .1s;
+}
+
+.about-us {
+  position: relative;
 }
 
 .about-us .container {
@@ -805,10 +798,23 @@ body {
 }
 
 .ourteam {
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding-top: 44px;
+}
+
+.line-vert-l_common,
+.line-vert-r_common,
+.line-center_common {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.line-center_common::after {
+  display: none;
 }
 
 .ourteam .container {
@@ -838,7 +844,9 @@ body {
 }
 
 .image-block__cube_left {
+  position: absolute;
   left: 0;
+  z-index: 2;
 }
 
 .bookatable .container {
@@ -939,10 +947,12 @@ body {
 }
 
 .specialties {
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 44px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .specialties__title {
@@ -964,7 +974,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* padding-bottom: 46px; */
 }
 
 .specialties .image-block__photo img {
@@ -993,7 +1002,7 @@ body {
   font-size: 0;
 }
 
-.specialties-slider_item {
+.specialties-slider .specialties-slider_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1272,6 +1281,12 @@ body {
 
 /* END ABOUT US */
 /* BOOK A TABLE */
+@media (max-width: 1115px) {
+  .time-and-phones {
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 1041px) {
   .bookatable .container {
     -webkit-box-align: end;

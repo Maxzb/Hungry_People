@@ -265,8 +265,6 @@
    .menu li:not(:last-child) {
       margin-bottom: 25px;
    }
-
-   .logo {}
 }
 
 
@@ -291,6 +289,11 @@
 /* END ABOUT US */
 
 /* BOOK A TABLE */
+@media (max-width: 1115px){
+   .time-and-phones{
+      margin-bottom: 50px;
+   }
+}
 @media (max-width: 1041px){
    .bookatable .container {
       align-items: flex-end;

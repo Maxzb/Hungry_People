@@ -2,10 +2,22 @@
    color: #fff;
 }
 .ourteam{
+   position: relative;
    @include bg();
    padding-top: 44px;
 }
-
+.line-vert-l_common,
+.line-vert-r_common,
+.line-center_common{
+   position: absolute;
+   top: 0;
+   bottom: 0;
+}
+.line-center_common{
+   &::after{
+      display: none;
+   }
+}
 .ourteam .container {
    display: flex;
    justify-content: center;
@@ -24,5 +36,7 @@
    text-align: right;
 }
 .image-block__cube_left {
+   position: absolute;
    left: 0;
+   z-index: 2;
 }

@@ -3,7 +3,7 @@ $(document).ready(function () {
 		$('.hamburger').toggleClass('is-active');
 		$('.mob-menu').toggleClass('menu-active');
 		$('.mob-menu__circle').toggleClass('mob-menu__circle--transform');
-		/* $('html, body').toggleClass('scroll'); */
+		$('body').toggleClass('scroll');
 	});
 
 	
@@ -14,6 +14,10 @@ $(document).ready(function () {
 		arrows:false,
 		dots:true,
 		slidesToShow:1,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		autoplay: true,
+		autoplaySpeed: 3500,
 		appendDots:$('.specialties-slider_dots')
 		/* speed:1000, */
 		/* responsive:[
