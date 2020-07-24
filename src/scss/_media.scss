@@ -277,6 +277,9 @@
    .ourteam .container {
       flex-direction: column;
    }
+   .time-and-phones{
+      font-size: 14px;
+   }
 }
 
 @media (max-width: 501px) {
@@ -298,6 +301,9 @@
    .form__input {
       height: 54.5px;
       flex: 1 1 100%;
+   }
+   .time-and-phones{
+      margin-top: 25px;
    }
    
 }
@@ -324,6 +330,9 @@
    }
    .section-info-block__form{
       padding: 0 10%;
+   }
+   .time-and-phones{
+      margin-top: 0;
    }
 }
 @media (max-width: 501px) {
