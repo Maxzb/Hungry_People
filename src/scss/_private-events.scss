@@ -1,0 +1,47 @@
+.private-events-block{
+   position: relative;
+   padding: 45px 0 0 0;
+}
+.private-events-block__images{
+   display: flex;
+}
+.image-block{
+   position: relative;
+}
+a.image-block__photo{
+   display: block;
+   transition-duration: .3s;
+   &:hover{
+      transform: scale(1.02);
+      transition-duration: .3s;
+   }
+}
+.image-block__text-photo--right,
+.image-block__text-photo--left{
+   position: absolute;
+   font-family: "Banny";
+   width: 80px;
+   height: 475px;
+   font-size: 24px;
+   font-weight: 700;
+   color: #fff;
+   text-transform: uppercase;
+   background-color: #000;
+}
+.image-block__text-photo--right{
+   top: 0;
+   right: 0;
+   padding-top: 40px;
+   p {
+      transform: rotate(90deg);
+   }
+   
+}
+.image-block__text-photo--left{
+   top: 0;
+   left: 0;
+   p {
+      transform: rotate(-90deg);
+   }
+   
+}

@@ -77,6 +77,8 @@ $(document).ready(function () {
 
 	// СТИЛИЗАЦИЯ СКРОЛА
 	/* $(".inner-block__order-list").mCustomScrollbar({}); */
+
+	//DELICIOUS MENU
 	$('.soupe-link').on("click", function(e) {
       e.preventDefault();
       $('.delicious-menu-block__block').removeClass('active_menu');

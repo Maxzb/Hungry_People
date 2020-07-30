@@ -848,7 +848,7 @@ body {
   padding-bottom: 46px;
 }
 
-.ourteam__title {
+.block__title {
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -973,15 +973,6 @@ body {
   padding-bottom: 45px;
 }
 
-.specialties__title {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.5em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .specialties .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1032,7 +1023,7 @@ body {
 
 .delicious-menu-block {
   position: relative;
-  padding: 75px 0 0 0;
+  padding: 75px 0 30px 0;
 }
 
 .delicious-menu-block__list ul {
@@ -1133,6 +1124,73 @@ body {
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
+}
+
+.private-events-block {
+  position: relative;
+  padding: 45px 0 0 0;
+}
+
+.private-events-block__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.image-block {
+  position: relative;
+}
+
+a.image-block__photo {
+  display: block;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+a.image-block__photo:hover {
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+.image-block__text-photo--right,
+.image-block__text-photo--left {
+  position: absolute;
+  font-family: "Banny";
+  width: 80px;
+  height: 475px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #000;
+}
+
+.image-block__text-photo--right {
+  top: 0;
+  right: 0;
+  padding-top: 40px;
+}
+
+.image-block__text-photo--right p {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.image-block__text-photo--left {
+  top: 0;
+  left: 0;
+}
+
+.image-block__text-photo--left p {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 @media (max-width: 1091px) {
