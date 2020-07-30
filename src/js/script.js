@@ -1,9 +1,13 @@
+@@include('libs/parallax.min.js')
+@@include('libs/slick.min.js')
+@@include('libs/jquery.maskedinput.min.js')
+
 $(document).ready(function () {
-	$('.hamburger').on('click', function () {
+	$('.hamburger').on('click', function() {
 		$('.hamburger').toggleClass('is-active');
 		$('.mob-menu').toggleClass('menu-active');
 		$('.mob-menu__circle').toggleClass('mob-menu__circle--transform');
-		$('body').toggleClass('scroll');
+		/* $('body').toggleClass('scroll'); */
 	});
 
 
@@ -49,8 +53,6 @@ $(document).ready(function () {
 			$('.hamburger').toggleClass('is-active');
 			$('.mob-menu').toggleClass('menu-active');
 			$('.mob-menu__circle').toggleClass('mob-menu__circle--transform');
-			$('body').toggleClass('scroll');
-
 		});
 	});
 
@@ -63,4 +65,55 @@ $(document).ready(function () {
 
 	// СТИЛИЗАЦИЯ СКРОЛА
 	/* $(".inner-block__order-list").mCustomScrollbar({}); */
+	$('.soupe-link').on("click", function(e) {
+      e.preventDefault();
+      $('.delicious-menu-block__block').removeClass('active_menu');
+      $('.soupe_menu').addClass('active_menu');
+      $('.menu-link').css('color', '#000');
+      $('.soupe-link').css('color', '#e8c300');
+   });
+
+	$('.pizza-link').on("click", function(e) {
+      e.preventDefault();
+      $('.delicious-menu-block__block').removeClass('active_menu');
+      $('.pizza_menu').addClass('active_menu');
+      $('.menu-link').css('color', '#000');
+      $('.pizza-link').css('color', '#e8c300');   
+   });
+	$('.pasta-link').on("click", function(e) {
+      e.preventDefault();
+      $('.delicious-menu-block__block').removeClass('active_menu');
+      $('.pasta_menu').addClass('active_menu');
+      $('.menu-link').css('color', '#000');
+      $('.pasta-link').css('color', '#e8c300');   
+   });
+	$('.desert-link').on("click", function(e) {
+      e.preventDefault();
+      $('.delicious-menu-block__block').removeClass('active_menu');
+      $('.desert_menu').addClass('active_menu');
+      $('.menu-link').css('color', '#000');
+      $('.desert-link').css('color', '#e8c300');   
+   });
+	$('.wine-link').on("click", function(e) {
+      e.preventDefault();
+      $('.delicious-menu-block__block').removeClass('active_menu');
+      $('.wine_menu').addClass('active_menu');
+      $('.menu-link').css('color', '#000');
+      $('.wine-link').css('color', '#e8c300');   
+   });
+	$('.beer-link').on("click", function(e) {
+      e.preventDefault();
+      $('.delicious-menu-block__block').removeClass('active_menu');
+      $('.beer_menu').addClass('active_menu');
+      $('.menu-link').css('color', '#000');
+      $('.beer-link').css('color', '#e8c300');   
+   });
+	$('.drinks-link').on("click", function(e) {
+      e.preventDefault();
+      $('.delicious-menu-block__block').removeClass('active_menu');
+      $('.drinks_menu').addClass('active_menu');
+      $('.menu-link').css('color', '#000');
+      $('.drinks-link').css('color', '#e8c300');   
+   });
+
 });

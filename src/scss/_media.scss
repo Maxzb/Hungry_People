@@ -384,3 +384,44 @@
 }
 
 /* END SLIDER */
+
+/* MENU */
+@media (max-width: 321px){
+   .delicious-menu-block__title-price-common{
+      font-size: 15px;
+   }
+}
+@media (max-width: 350px){
+   .delicious-menu-block__list a{
+      width: 50px;
+      text-align: center;   
+   }
+   .delicious-menu-block__list ul li{
+      &:nth-child(3n+3){
+         border-right: none;
+      }
+   }
+   .delicious-menu-block__title-price-common{
+      font-size: 15px;
+   }
+}
+@media (max-width: 861px){
+   .delicious-menu-block__list ul li{
+      padding: 0 30px;
+   }
+   .delicious-menu-block__list ul{
+      flex-wrap: wrap;
+   }
+}
+
+@media (max-width: 769px){
+   .delicious-menu-block__list ul li{
+      padding: 0 20px;
+   }
+   .delicious-menu-block__item{
+      margin-bottom: 25px;
+   }
+}
+
+
+/* END MENU */

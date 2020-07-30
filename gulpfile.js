@@ -144,7 +144,7 @@ function clean(params){
    return del(path.clean);
 }
 
-/* Создание файлов с библиотеками доп.модулей типа слайдеров и т.д. */
+/* Создание файлов с библиотеками доп.модулей типа слайдеров и т.д. ОТКЛЮЧЕН!!! */
 function libscss(){
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.css'
@@ -163,7 +163,7 @@ function libsjs(){
 let libs = gulp.series(libscss, libsjs);
 /* -------------------------------------------------------- */
 
-let build = gulp.series(clean, gulp.parallel(js, libs, css, html, images, fonts));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts)); /* libs УБРАЛ! */
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.libs = libs;

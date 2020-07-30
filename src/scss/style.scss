@@ -1,13 +1,15 @@
 @import "null";
 @import "fonts";
 @import "mixins";
-@import "hamburger";
-@import "libs";
+@import "libs/hamburger";
 @import "variables";
+@import "libs/_slick";
+@import "libs/slick-slider";
 @import "main";
 @import "header";
 @import "about-us";
 @import "ourteam";
 @import "bookatable";
 @import "specialties";
+@import "menu";
 @import "media";
