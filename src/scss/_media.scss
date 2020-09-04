@@ -25,6 +25,7 @@
          margin: 0;
       }
    }
+
    .line-center {
       display: none;
    }
@@ -271,11 +272,13 @@
 /* ABOUT US */
 
 @media (max-width: 921px) {
+
    .about-us .container,
    .ourteam .container {
       flex-direction: column;
    }
-   .time-and-phones{
+
+   .time-and-phones {
       font-size: 14px;
    }
 }
@@ -289,67 +292,82 @@
 /* END ABOUT US */
 
 /* BOOK A TABLE */
-@media (max-width: 1115px){
-   .time-and-phones{
+@media (max-width: 1115px) {
+   .time-and-phones {
       margin-bottom: 50px;
    }
 }
-@media (max-width: 1041px){
+
+@media (max-width: 1041px) {
    .bookatable .container {
       align-items: flex-end;
    }
-   .section-info-block__form{
+
+   .section-info-block__form {
       flex-direction: column;
    }
+
    .form__input {
       height: 54.5px;
       flex: 1 1 100%;
    }
-   .time-and-phones{
+
+   .time-and-phones {
       margin-top: 25px;
    }
-   
+
 }
-@media (max-width: 950px){
-   .section-info-block__title_form{
+
+@media (max-width: 950px) {
+   .section-info-block__title_form {
       font-size: 26px;
    }
-   .section-info-block__form{
+
+   .section-info-block__form {
       padding-right: 0;
    }
 }
+
 @media (max-width: 921px) {
-   .section-info-block__title_form{
+   .section-info-block__title_form {
       white-space: nowrap;
       font-size: 36px;
    }
+
    .bookatable .container {
       flex-direction: column;
       align-items: center;
    }
+
    .form__input {
       height: 60px;
       flex: 0 1 49%;
    }
-   .section-info-block__form{
+
+   .section-info-block__form {
       padding: 0 10%;
    }
-   .time-and-phones{
+
+   .time-and-phones {
       margin-top: 0;
    }
 }
+
 @media (max-width: 501px) {
-   .section-info-block__form{
+   .section-info-block__form {
       flex-direction: column;
    }
+
    .form__input {
       height: 54.5px;
       flex: 1 1 100%;
    }
-   .section-info-block__form{
+
+   .section-info-block__form {
       padding: 0 5%;
    }
-   .form__button{
+
+   .form__button {
       margin-bottom: 5%;
    }
 }
@@ -359,26 +377,31 @@
 /* SLIDER */
 
 @media (max-width: 963px) {
-   .specialties-slider_item{
+   .specialties-slider_item {
       flex-direction: column;
    }
-   .specialties .image-block__photo img{
+
+   .specialties .image-block__photo img {
       margin: 0 auto;
    }
-   .specialties .image-block__cube_left{
+
+   .specialties .image-block__cube_left {
       left: 50px;
    }
-   .specialties-slider_dots{
+
+   .specialties-slider_dots {
       padding-top: 50px;
    }
 }
+
 @media (max-width: 690px) {
-   .specialties .image-block__cube_left{
+   .specialties .image-block__cube_left {
       display: none;
    }
 }
+
 @media (max-width: 381px) {
-   .specialties-slider_dots{
+   .specialties-slider_dots {
       padding-top: 25px;
    }
 }
@@ -386,42 +409,168 @@
 /* END SLIDER */
 
 /* MENU */
-@media (max-width: 321px){
-   .delicious-menu-block__title-price-common{
+@media (max-width: 321px) {
+   .delicious-menu-block__title-price-common {
       font-size: 15px;
    }
 }
-@media (max-width: 350px){
-   .delicious-menu-block__list a{
+
+@media (max-width: 350px) {
+   .delicious-menu-block__list a {
       width: 50px;
-      text-align: center;   
+      text-align: center;
    }
-   .delicious-menu-block__list ul li{
-      &:nth-child(3n+3){
+
+   .delicious-menu-block__list ul li {
+      &:nth-child(3n+3) {
          border-right: none;
       }
    }
-   .delicious-menu-block__title-price-common{
+
+   .delicious-menu-block__title-price-common {
       font-size: 15px;
    }
 }
-@media (max-width: 861px){
-   .delicious-menu-block__list ul li{
+
+@media (max-width: 861px) {
+   .delicious-menu-block__list ul li {
       padding: 0 30px;
    }
-   .delicious-menu-block__list ul{
+
+   .delicious-menu-block__list ul {
       flex-wrap: wrap;
    }
 }
 
-@media (max-width: 769px){
-   .delicious-menu-block__list ul li{
+@media (max-width: 769px) {
+   .delicious-menu-block__list ul li {
       padding: 0 20px;
    }
-   .delicious-menu-block__item{
+
+   .delicious-menu-block__item {
       margin-bottom: 25px;
    }
 }
 
 
 /* END MENU */
+
+/* PRIVATE-EVENTS */
+@media (max-width: 880px) {
+   .image-block__text-photo--left p {
+      top: 80%;
+   }
+}
+
+@media (max-width: 768px) {
+   a.image-block__photo {
+      filter: none;
+   }
+
+   .image-block__cube {
+      display: none;
+   }
+
+   .image-block__text-photo--right,
+   .image-block__text-photo--left {
+      font-size: 22px;
+   }
+
+   .image-block__text-photo--left p {
+      top: 75%;
+   }
+
+   @media (max-width: 678px) {
+
+      .image-block__text-photo--right,
+      .image-block__text-photo--left {
+         font-size: 18px;
+         width: 60px;
+      }
+   }
+
+   @media (max-width: 530px) {
+
+      .image-block__text-photo--right,
+      .image-block__text-photo--left {
+         font-size: 16px;
+      }
+   }
+
+   @media (max-width: 460px) {
+
+      .image-block__text-photo--right,
+      .image-block__text-photo--left {
+         font-size: 14px;
+         width: 40px;
+      }
+
+      .image-block__text-photo--right p {
+         top: 30px;
+      }
+   }
+
+   @media (max-width: 430px) {
+      .image-block__text-photo--left p {
+         top: 68%;
+         white-space: normal;
+      }
+   }
+}
+
+/* END PRIVATE-EVENTS */
+
+/* CONTACT */
+
+@media (max-width: 1247px) {
+   .contact-block__contacts {
+      order: 6;
+      margin-top: 15px;
+   }
+
+   .contact-block__form-button {
+      order: 5;
+   }
+}
+
+@media (max-width: 768px) {
+
+   .contact-block__form .form__input,
+   .contact-block__form-button,
+   .contact-block__contacts {
+      flex: 0 1 100%;
+      justify-content: center;
+   }
+}
+
+@media (max-width: 670px) {
+   .contact-block__contacts {
+      flex-wrap: wrap;
+   }
+}
+
+@media (max-width: 650px) {
+   .contact-block__contacts {
+      flex-direction: column;
+      p{
+         margin-right: 0;
+      }
+   }
+   .icon-phone + a + span {
+      display: none;
+   }
+   .contact-block__margin {
+      margin-right: 0;
+   }
+   [class^=icon-]{
+      margin-right: 0;
+   }
+}
+
+@media (max-width: 600px) {
+   .photo-block {
+      grid-template: auto / repeat(2, 50%);
+   }
+}
+
+/* END CONTACT */

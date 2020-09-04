@@ -1,6 +1,6 @@
 .private-events-block{
    position: relative;
-   padding: 45px 0 0 0;
+   padding: 45px 0 45px 0;
 }
 .private-events-block__images{
    display: flex;
@@ -10,10 +10,10 @@
 }
 a.image-block__photo{
    display: block;
-   transition-duration: .3s;
+   filter: grayscale(100%);
+   transition-duration: .2s;
    &:hover{
-      transform: scale(1.02);
-      transition-duration: .3s;
+      filter: none;
    }
 }
 .image-block__text-photo--right,
@@ -21,7 +21,7 @@ a.image-block__photo{
    position: absolute;
    font-family: "Banny";
    width: 80px;
-   height: 475px;
+   height: 82.9%;
    font-size: 24px;
    font-weight: 700;
    color: #fff;
@@ -29,19 +29,53 @@ a.image-block__photo{
    background-color: #000;
 }
 .image-block__text-photo--right{
-   top: 0;
-   right: 0;
-   padding-top: 40px;
+   top: 8.5%;
+   right: 7.5%;
+   border-radius: 0 5px 5px 0;
    p {
+      position: relative;
+      top: 50px;
+      width: auto;
       transform: rotate(90deg);
    }
    
 }
 .image-block__text-photo--left{
-   top: 0;
-   left: 0;
+   top: 8.5%;
+   left: 7.5%;
+   border-radius: 5px 0 0 5px;
    p {
+      position: relative;
+      top: 84%;
       transform: rotate(-90deg);
+      white-space: nowrap;
+   }
+}
+.contact-block__contacts,
+.private-events-info {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 12px;
+   color: rgba(255, 255, 255, 0.5);
+   text-align: center;
+   padding: 0 15px;
+   line-height: 2;
+   span {
+      font-weight: 700;
+      white-space: nowrap;
+      &:last-child{
+         font-weight: 400;
+         white-space: nowrap;
+      }
+   }
+   a{
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 700;
+      white-space: nowrap;
+      &:hover{
+         transition-duration: .2s;
+         color: $orange;
+      }
    }
    
 }

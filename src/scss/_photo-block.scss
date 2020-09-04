@@ -1,0 +1,12 @@
+.photo-main-block{
+   padding: 78px 0 78px 0;
+}
+
+.photo-block{
+   display: grid;
+   grid-template: auto / repeat(4, 25%);
+}
+.photo-item-img{
+   width: 100%;
+   height: auto;
+}
