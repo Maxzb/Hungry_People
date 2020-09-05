@@ -54,8 +54,8 @@ $(document).ready(function () {
 
 	//ПЛАВНОЕ ПЕРЕМЕЩЕНИЕ К ЯКОРЯМ
 	$(function () {
-		$('.menu').on("click", "a", function (event) {
-			event.preventDefault();
+		$('.menu').on("click", "a", function (e) {
+			e.preventDefault();
 			//забираем идентификатор с атрибута href
 			var id = $(this).attr('href'),
 				//узнаем высоту от начала страницы до блока на который ссылается якорь

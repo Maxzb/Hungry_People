@@ -1383,6 +1383,27 @@ a.image-block__photo:hover {
   margin-right: 10px;
 }
 
+.map-block {
+  max-width: 100%;
+  height: 475px;
+}
+
+.footer {
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.footer__copyright {
+  line-height: 100px;
+  font-size: 12px;
+  color: rgba(250, 250, 250, 0.5);
+}
+
+.footer__copyright span {
+  font-weight: 700;
+}
+
 @media (max-width: 1091px) {
   .info-block {
     top: 32%;
