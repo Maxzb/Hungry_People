@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="EN-en">
+<html lang="en">
+
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,39 @@
    <!-- Убирает формат ссылки у номера телефона на IOS -->
    <meta name="format-detection" content="telephone=no">
 
-   <!-- Фиксированная ширина -->
-   <meta name="viewport" content="width=1170">
-
    <!-- С маштабированием! -->
-   <meta name="viewport" content="width=device-width, initial-scale=1"> 
-   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
    <meta name="description" content="">
    <meta name="keywords" content="">
 
-   <link rel="icon" href="favicon.ico" /> 
+   <link rel="icon" href="favicon.ico" />
 
    <link rel="stylesheet" href="css/style.min.css">
+   <link rel="stylesheet" href="css/fancybox.css">
+
 
    <title>Hungry People</title>
 </head>
+
 <body>
-   
-   @@include('_header.html')
-   @@include('_about-us.html')
-   @@include('_ourteam.html')
-   @@include('_bookatable.html')
-   @@include('_specialties.html')
-   @@include('_menu.html')
-   @@include('_private-events.html')
-   @@include('_photo-block.html')
-   @@include('_contact.html')
-   @@include('_map.html')
-   @@include('_footer.html')
-   
+
+      @@include('_header.html')
+   <main>
+      @@include('_about-us.html')
+      @@include('_ourteam.html')
+      @@include('_bookatable.html')
+      @@include('_specialties.html')
+      @@include('_menu.html')
+      @@include('_private-events.html')
+      @@include('_photo-block.html')
+      @@include('_contact.html')
+      @@include('_map.html')
+   </main>
+      @@include('_footer.html')
+
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="js/script.min.js"></script>
+   <script src="js/script.es5.min.js"></script>
 </body>
+
 </html>

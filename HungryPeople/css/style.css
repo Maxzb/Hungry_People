@@ -84,10 +84,11 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+/* FONTELLO */
 @font-face {
   font-family: 'fontello';
-  src: url("../../fonts/font-icons/fontello.eot?23619431");
-  src: url("../../fonts/font-icons/fontello.eot?23619431#iefix") format("embedded-opentype"), url("../../fonts/font-icons/fontello.woff2?23619431") format("woff2"), url("../../fonts/font-icons/fontello.woff?23619431") format("woff"), url("../../fonts/font-icons/fontello.ttf?23619431") format("truetype"), url("../../fonts/font-icons/fontello.svg?23619431#fontello") format("svg");
+  src: url("../fonts/font-icons/fontello.eot?23619431");
+  src: url("../fonts/font-icons/fontello.eot?23619431#iefix") format("embedded-opentype"), url("../fonts/font-icons/fontello.woff2?23619431") format("woff2"), url("../fonts/font-icons/fontello.woff?23619431") format("woff"), url("../fonts/font-icons/fontello.ttf?23619431") format("truetype"), url("../fonts/font-icons/fontello.svg?23619431#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -95,13 +96,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?23619431#fontello') format('svg');
-  }
-}
-*/
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+	  font-family: 'fontello';
+	  src: url('../font/fontello.svg?23619431#fontello') format('svg');
+	}
+ }
+ */
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
@@ -411,12 +412,19 @@ body {
   margin: 0 auto;
 }
 
+.hidden {
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
 .header {
   position: relative;
 }
 
 .mob-menu {
   display: none;
+  min-height: 568px;
 }
 
 .wrapper {
@@ -710,14 +718,6 @@ body {
           transition-duration: .8s;
 }
 
-.menu-active {
-  top: 0;
-}
-
-.scroll {
-  overflow: hidden;
-}
-
 /* Mobile burger */
 .mob-menu__burger {
   position: absolute;
@@ -766,6 +766,18 @@ body {
   -webkit-transition-duration: .1s;
        -o-transition-duration: .1s;
           transition-duration: .1s;
+}
+
+.menu-active {
+  top: 0;
+}
+
+.scroll {
+  overflow: hidden;
+}
+
+.mob-menu-overflow {
+  overflow: auto;
 }
 
 .about-us {
@@ -1388,6 +1400,11 @@ a.image-block__photo:hover {
   height: 475px;
 }
 
+.map-block iframe {
+  width: 100%;
+  height: 475px;
+}
+
 .footer {
   height: 100px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -1508,18 +1525,17 @@ a.image-block__photo:hover {
   }
 }
 
-@media (max-height: 679px) {
-  .menu li {
-    margin-bottom: 25px;
-  }
+/* @media (max-height: 679px) {
+   .menu li {
+      margin-bottom: 25px;
+   }
 }
 
 @media (max-height: 604px) {
-  .menu li {
-    margin-bottom: 20px;
-  }
-}
-
+   .menu li {
+      margin-bottom: 20px;
+   }
+} */
 @media (max-width: 581px) {
   .info-block__title {
     font-size: 70px;
@@ -1600,7 +1616,7 @@ a.image-block__photo:hover {
     font-size: 18px;
   }
   .menu li:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1956,3 +1972,20 @@ a.image-block__photo:hover {
 }
 
 /* END CONTACT */
+@media (max-height: 680px) {
+  .mob-menu .menu li:not(last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-height: 650px) {
+  .mob-menu .menu li:not(last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-height: 600px) {
+  .mob-menu .menu li:not(last-child) {
+    margin-bottom: 20px;
+  }
+}

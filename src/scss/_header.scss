@@ -3,6 +3,7 @@
 }
 .mob-menu{
    display: none;
+   min-height: 568px;
 }
 
 .wrapper {
@@ -235,12 +236,6 @@
       transition-duration: .8s;
    }
 }
-.menu-active{
-   top: 0;
-}
-.scroll {
-   overflow: hidden;
- }
 
 /* Mobile burger */
 .mob-menu__burger {
@@ -282,4 +277,16 @@
    bottom: 2px;
    transform: translateX(-45px) perspective(200px) rotateX(180deg);
    transition-duration: .1s;
+}
+
+.menu-active {
+   top: 0;
+}
+
+.scroll {
+   overflow: hidden;
+}
+
+.mob-menu-overflow {
+   overflow: auto;
 }

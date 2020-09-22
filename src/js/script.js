@@ -1,13 +1,15 @@
 @@include('libs/parallax.min.js')
 @@include('libs/slick.min.js')
 @@include('libs/jquery.maskedinput.min.js')
+@@include('libs/fancybox.min.js')
 
 $(document).ready(function () {
 	$('.hamburger').on('click', function() {
 		$('.hamburger').toggleClass('is-active');
 		$('.mob-menu').toggleClass('menu-active');
+		$('.mob-menu').toggleClass('mob-menu-overflow');
 		$('.mob-menu__circle').toggleClass('mob-menu__circle--transform');
-		/* $('body').toggleClass('scroll'); */
+		$('body').toggleClass('scroll');
 	});
 
 
@@ -41,7 +43,7 @@ $(document).ready(function () {
 	});
 
 	//ПЛАВНОЕ ПЕРЕМЕЩЕНИЕ К ЯКОРЯМ
-	$(function () {
+	$(document).ready(function() {
 		$('.menu').on("click", "a", function (e) {
 			e.preventDefault();
 			//забираем идентификатор с атрибута href
@@ -53,7 +55,8 @@ $(document).ready(function () {
 			$('.hamburger').toggleClass('is-active');
 			$('.mob-menu').toggleClass('menu-active');
 			$('.mob-menu__circle').toggleClass('mob-menu__circle--transform');
-			// $('html, body').toggleClass('scroll');
+			$('body').removeClass('scroll');
+			$('.mob-menu').toggleClass('mob-menu-overflow');
 		});
 	});
 
@@ -119,4 +122,11 @@ $(document).ready(function () {
       $('.drinks-link').css('color', '#e8c300');   
    });
 
+	const a = 5;
+	const c = 10;
+
+	function babel() {
+		return a + c;
+	}
+	console.log(babel());
 });

@@ -14,7 +14,7 @@ let path = {
       css: source_folder+'/scss/style.scss',
       js: source_folder+'/js/script.js',
       images: source_folder+'/images/**/*.{jpg,png,svg,gif,ico,webp}',
-      fonts: source_folder+'/fonts/*.ttf',
+      fonts: source_folder+'/fonts/**/*',
    },
    watch:{
       html: source_folder+'/**/*.html',
@@ -41,7 +41,8 @@ let {src, dest} = require('gulp'),
     webphtml = require('gulp-webp-html'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
-    otf2ttf = require('gulp-fonter');
+    otf2ttf = require('gulp-fonter'),
+    babel = require('gulp-babel');
 
 function browserSync(params){
    browsersync.init({
@@ -79,12 +80,23 @@ function css() {
       .pipe(clean_css())
       .pipe(rename({suffix: '.min'}))
       .pipe(dest(path.build.css))
-      .pipe(browsersync.stream())
 }
-
 function js() {
    return src(path.src.js)
       .pipe(fileinclude())
+      .pipe(dest(path.build.js))
+      .pipe(uglify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(dest(path.build.js))
+      .pipe(browsersync.stream())
+}
+function es5() {
+   return src(path.src.js)
+      .pipe(fileinclude())
+      .pipe(babel({
+         presets: ['@babel/env']
+      }))
+      .pipe(rename({suffix: '.es5'}))
       .pipe(dest(path.build.js))
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
@@ -137,6 +149,7 @@ function watchFiles(params){
    gulp.watch([path.watch.html], html);
    gulp.watch([path.watch.css], css);
    gulp.watch([path.watch.js], js);
+   gulp.watch([path.watch.js], es5);
    gulp.watch([path.watch.images], images);
 }
 
@@ -161,15 +174,16 @@ function libsjs(){
     .pipe(dest(path.build.js))
 }
 let libs = gulp.series(libscss, libsjs);
-/* -------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts)); /* libs УБРАЛ! */
+let build = gulp.series(clean, gulp.parallel(es5, js, css, html, images, fonts)); /* libs УБРАЛ! */
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.libs = libs;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
+exports.es5 = es5;
 exports.css = css;
 exports.html = html;
 exports.build = build;
